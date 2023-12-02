@@ -30,7 +30,7 @@ function LogIn() {
 <a className="label-text" href="">Forget password?</a>
 <div className="pt-10">
 <button type="submit" className="btns-primary ">
-Register
+LogIn
 </button>
 </div>
        </Form>
