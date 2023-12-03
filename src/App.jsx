@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { FaBangladeshiTakaSign } from "react-icons/fa6";
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" >
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" >
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+const App = () => {
+
+	return (
+		<div className='p-5'>
+			<table className='table-auto'>
+				<thead>
+					<tr>
+						<th>Sl</th>
+						<th>Sales Code</th>
+						<th>Sale Number</th>
+						<th>Payment</th>
+					</tr>
+				</thead>
+				<tr>
+					<td>1</td>
+					<td>Cv-01</td>
+					<td>001</td>
+					<td rowSpan='3' className='text-center'>
+						<span className='flex justify-center'>
+							<FaBangladeshiTakaSign className='my-auto' />
+							<p>3000</p>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Cv-01</td>
+					<td>002</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Cv-03</td>
+					<td>001</td>
+				</tr>
+				<tr>
+					<td colSpan='3' className='text-center'>
+						Grand Total
+					</td>
+					<td className='text-center'>
+						<span className='flex  justify-center'>
+							<FaBangladeshiTakaSign className='my-auto' />
+							<p>3000</p>
+						</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+	);
 }
 
-export default App
+export default App;
